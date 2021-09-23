@@ -79,7 +79,7 @@ body {
 
 .container::after {
   content: '';
-  background: url('https://i.postimg.cc/wMnr2vcF/Screen-Shot-20210923061628.png') no-repeat;
+  background: url('https://i.postimg.cc/FzXWkq9n/Screen-Shot-20210923061628.png') no-repeat;
   background-size: cover;
   width: 160px;
   height: 120px;
