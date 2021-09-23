@@ -1,0 +1,336 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 12px;
+}
+
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* START wrapper */
+.wrapper {
+  min-height: 100vh;
+  background: linear-gradient(90deg, #F5F4FB 36.25rem, #3729B2 36.25rem);
+  display: grid;
+  grid-template-columns: 36.25rem 1fr;
+}
+
+@media (max-width: 1160px) {
+  .wrapper {
+    grid-template-columns: 40% 1fr;
+    background: linear-gradient(90deg, #F5F4FB 40%, #3729B2 40%);
+  }
+}
+
+/* START container */
+.container {
+  background-color: #F5F4FB;
+  margin: 3.75rem 12.5rem 3.75rem 0;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .container::before {
+    left: -80%;
+  }
+}
+
+@media (max-width: 1160px) {
+  .container {
+    margin: 60px auto 60px 0;
+  }
+}
+
+.container::before {
+  content: '';
+  background-color: #0FD799;
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  top: -3.125rem;
+  left: -430px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.container::after {
+  content: '';
+  background: url('https://i.postimg.cc/wMnr2vcF/Screen-Shot-20210923061628.png') no-repeat;
+  background-size: cover;
+  width: 160px;
+  height: 120px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 767px) {
+  .container::before {
+    left: -80%;
+  }
+}
+
+/* END container */
+/* END wrapper */
+/* START MAIN */
+main {
+  padding: 3.75rem 2.5rem 7.5rem;
+}
+
+@media (max-width: 767px) {
+  main {
+    padding: 3.75rem 1rem 7.5rem;
+  }
+}
+
+main header {
+  margin-bottom: 1.875rem;
+}
+
+main header h2 {
+  color: #000;
+  font-size: 1.75rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: .0625rem;
+}
+
+main header span.title {
+  display: block;
+  font-size: 1.125rem;
+  margin-block: .625rem;
+  font-weight: 600;
+  color: #aaa;
+}
+
+/* -------------- */
+main .parent {
+  display: flex;
+  flex-flow: wrap row;
+  gap: 3.75rem;
+}
+
+main .parent section.form form input::placeholder,
+main .parent section.form form textarea::placeholder {
+  color: #777;
+}
+
+main .parent section.form form .user-name input,
+main .parent section.form form .mail-form input,
+main .parent section.form form textarea {
+  outline: none;
+  border: none;
+  resize: none;
+  background-color: transparent;
+  padding: .625rem 1.25rem;
+  border-bottom: .0625rem solid #777;
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: .625rem;
+  width: 100%;
+}
+
+main .parent section.form form .user-name input:focus,
+main .parent section.form form .mail-form input:focus,
+main .parent section.form form textarea:focus {
+  border-bottom-width: .125rem;
+}
+
+main .parent section.form form .send {
+  padding: 1.25rem;
+  border: none;
+  outline: none;
+  position: relative;
+}
+
+main .parent section.form form .send input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #3729B2;
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+main .parent section.form form .send::before {
+  font-family: "Font Awesome 5 Free";
+  content: '\f1d8';
+  font-weight: 600;
+  font-size: 1rem;
+  color: #3729B2;
+  cursor: pointer;
+}
+
+main .parent>* {
+  flex: 1;
+}
+
+/* --------------------------- */
+
+main .parent section.info h3 {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #000;
+  line-height: 1.5;
+}
+
+main .parent section.info p {
+  margin-block: 1.25rem;
+  color: #444;
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+main .parent section.info a {
+  display: block;
+  text-decoration: none;
+  font-size: .75rem;
+  margin-block: .625rem;
+}
+
+/* END MAIN */
+/* START aside */
+aside {
+  background-color: #3729B2;
+  padding: 2.5rem;
+  position: absolute;
+  z-index: 99;
+  height: 100%;
+  width: 23.75rem;
+  right: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 1160px) {
+  aside {
+    width: 67%;
+  }
+}
+
+
+@media (max-width: 767px) {
+  aside {
+    padding: 2.5rem 1rem;
+  }
+}
+
+
+aside .logo img {
+  width: 2.5rem;
+}
+
+aside nav {
+  text-transform: capitalize;
+  flex: 1;
+}
+
+aside nav ul {
+  margin-block: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  font-size: .875rem;
+  font-weight: 300;
+
+}
+
+aside nav ul li {
+  position: relative;
+}
+
+aside nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+aside nav ul li.active::after,
+aside nav ul li:hover::after {
+  cursor: pointer;
+  content: '';
+  background-color: #ffffff2f;
+  width: 6.25rem;
+  height: 100%;
+  padding: .5rem .2rem;
+  position: absolute;
+  top: 50%;
+  left: -1rem;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  border-radius: .4rem;
+  -webkit-border-radius: .4rem;
+  -moz-border-radius: .4rem;
+  -ms-border-radius: .4rem;
+  -o-border-radius: .4rem;
+}
+
+
+aside .notify p:first-of-type {
+  color: #ffffff83;
+  font-size: .75rem;
+  line-height: 1.6;
+  font-weight: 400;
+  text-transform: none;
+}
+
+aside .notify p:last-of-type {
+  color: #ffffffb2;
+  font-size: .8125rem;
+  line-height: 1.6;
+  font-weight: 400;
+  text-transform: none;
+  margin-block: .625rem;
+}
+
+aside .notify h3 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.45rem;
+  text-transform: none;
+}
+
+aside .notify .mail a,
+aside .notify .mail i {
+  text-decoration: none;
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 600;
+}
+
+aside .notify .mail i {
+  margin-left: .1875rem;
+}
+
+/* END aside */
